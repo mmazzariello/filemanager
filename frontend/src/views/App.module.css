@@ -15,3 +15,10 @@
   width: 100%;
   overflow-x: hidden;
 }
+
+@media screen and (max-width: 1024px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+}
