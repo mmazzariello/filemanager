@@ -1,4 +1,5 @@
 .FileExplorer {
+  /* border: 2px solid orchid; */
   --filexplorer-bgcolor: #2f2f2f;
 
   background-color: var(--filexplorer-bgcolor);
@@ -7,6 +8,9 @@
 .FileExplorerEmpty {
   padding: 18px;
   text-align: center;
+  /* border: 2px solid red; */
 }
 
-.FileExplorerItem {}
+.FileExplorerItem {
+  border: 2px solid yellow;
+}
