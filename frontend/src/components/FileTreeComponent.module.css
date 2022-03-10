@@ -1,3 +1,11 @@
+:root {
+  /* theme */
+  --filexplorer-bgcolor: #2f2f2f;
+  --hover: #3f3f3f;
+  --focused: #1c1c1c;
+  --white: #fff;
+}
+
 .TreeMenuContainer {
   border-radius: 4px;
   padding: 18px;
@@ -18,19 +26,22 @@
   font-weight: 500;
   width: 100%;
   border: none;
-  background-color: #2f2f2f;
-  color: #fff;
+  background-color: var(--filexplorer-bgcolor);
+  color: var(--white);
 }
 
-.ParentContainer:hover {
-  background-color: #3f3f3f;
+.ParentContainer:hover,
+.ChildContainer:hover {
+  background-color: var(--hover);
 }
 
-.ParentContainer:focus {
-  background-color: #1c1c1c;
+.ParentContainer:focus,
+.ChildContainer:focus {
+  background-color: var(--focused);
 }
 
-.ParentContainer:active {
+.ParentContainer:active,
+.ChildContainer:active {
   outline: 2px solid rgb(63, 63, 63);
 }
 
@@ -43,20 +54,8 @@
   cursor: pointer;
   width: 100%;
   border: none;
-  background-color: #2f2f2f;
-  color: #fff;
-}
-
-.ChildContainer:hover {
-  background-color: #3f3f3f;
-}
-
-.ChildContainer:focus {
-  background-color: #1c1c1c;
-}
-
-.ChildContainer:active {
-  outline: 2px solid rgb(63, 63, 63);
+  background-color: var(--filexplorer-bgcolor);
+  color: var(--white);
 }
 
 .Name {
@@ -67,8 +66,4 @@
 .Size {
   font-size: 12px;
   font-family: sans-serif;
-}
-
-.ChildContainer:hover {
-  background-color: #3f3f3f;
 }

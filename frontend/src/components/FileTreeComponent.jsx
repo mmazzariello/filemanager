@@ -14,12 +14,12 @@ export const FileTreeComponent = ({ tree, onSelectFile }) => {
 };
 
 const TreeItem = ({ item, onSelectFile }) => {
-  const marginLeft = item.parentId ? "8px" : 0;
+  const paddingLeft = item.parentId ? "8px" : 0;
 
-  const [showingChildren, setShowingChildren] = React.useState(true);
+  const [showingChildren, setShowingChildren] = React.useState(false);
 
   return (
-    <div style={{ marginLeft }}>
+    <div style={{ paddingLeft }} className={styles.Test}>
       {item.kind === "folder" ? (
         <FolderItem
           item={item}

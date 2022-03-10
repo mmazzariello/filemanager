@@ -1,13 +1,9 @@
 .FileExplorer {
   --filexplorer-bgcolor: #2f2f2f;
-
   background-color: var(--filexplorer-bgcolor);
 }
 
 .FileExplorerEmpty {
   padding: 18px;
   text-align: center;
-}
-
-.FileExplorerItem {
 }
