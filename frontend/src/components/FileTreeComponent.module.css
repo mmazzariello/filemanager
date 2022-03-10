@@ -1,0 +1,46 @@
+.TreeMenuContainer {
+  border-radius: 4px;
+  padding: 18px;
+  user-select: none;
+}
+
+.SelectMenu {
+  padding-top: 3px;
+  margin-right: 4px;
+}
+
+.ParentContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.ParentContainer:hover {
+  background-color: #3f3f3f;
+}
+
+.ChildContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.Name {
+  display: flex;
+  align-items: center;
+}
+
+.Size {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.ChildContainer:hover {
+  background-color: #3f3f3f;
+}

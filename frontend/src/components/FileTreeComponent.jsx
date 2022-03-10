@@ -1,15 +1,9 @@
 import * as React from "react";
+import styles from "./FileTreeComponent.module.css";
 
 export const FileTreeComponent = ({ tree, onSelectFile }) => {
   return (
-    <div
-      style={{
-        borderRadius: "4px",
-        padding: "8px",
-        userSelect: "none",
-        cursor: "default",
-      }}
-    >
+    <div className={styles.TreeMenuContainer}>
       {tree.map((item) => {
         return (
           <TreeItem key={item._id} item={item} onSelectFile={onSelectFile} />
@@ -20,7 +14,7 @@ export const FileTreeComponent = ({ tree, onSelectFile }) => {
 };
 
 const TreeItem = ({ item, onSelectFile }) => {
-  const marginLeft = item.parentId ? "18px" : 0;
+  const marginLeft = item.parentId ? "8px" : 0;
 
   const [showingChildren, setShowingChildren] = React.useState(true);
 
@@ -56,8 +50,7 @@ const TreeItem = ({ item, onSelectFile }) => {
 };
 
 const itemDefaultStyles = {
-  padding: "3px 6px",
-  display: "inline-block",
+  padding: "8px 0px",
   borderRadius: "4px",
 };
 
@@ -67,15 +60,13 @@ const FolderItem = ({ item, showingChildren, onClick }) => {
       onClick={onClick}
       style={{
         ...itemDefaultStyles,
-        display: "flex",
-        alignItems: "center",
-        fontWeight: "bold",
       }}
+      className={styles.ParentContainer}
     >
       {showingChildren ? (
-        <CaretDownIcon style={{ paddingTop: "3px" }} />
+        <CaretDownIcon className={styles.SelectMenu} />
       ) : (
-        <CaretRightIcon style={{ paddingTop: "3px" }} />
+        <CaretRightIcon className={styles.SelectMenu} />
       )}
       {item.name}
     </div>
@@ -89,13 +80,18 @@ const FileItem = ({ item, onClick }) => {
       onClick={onClick}
       style={{
         ...itemDefaultStyles,
-        display: "flex",
-        alignItems: "center",
-        gap: "2px",
       }}
+      className={styles.ChildContainer}
     >
-      <FileIcon style={{ paddingTop: "2px" }} />
-      {item.name}
+      <div className={styles.Name}>
+        <FileIcon
+          style={{
+            marginRight: "4px",
+          }}
+        />
+        <span>{item.name}</span>
+      </div>
+      <span className={styles.Size}> {item.size} Kb</span>
     </div>
   );
 };
