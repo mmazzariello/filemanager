@@ -56,7 +56,7 @@ const itemDefaultStyles = {
 
 const FolderItem = ({ item, showingChildren, onClick }) => {
   return (
-    <div
+    <button
       onClick={onClick}
       style={{
         ...itemDefaultStyles,
@@ -69,13 +69,13 @@ const FolderItem = ({ item, showingChildren, onClick }) => {
         <CaretRightIcon className={styles.SelectMenu} />
       )}
       {item.name}
-    </div>
+    </button>
   );
 };
 
 const FileItem = ({ item, onClick }) => {
   return (
-    <div
+    <button
       className="fileItem"
       onClick={onClick}
       style={{
@@ -92,7 +92,7 @@ const FileItem = ({ item, onClick }) => {
         <span>{item.name}</span>
       </div>
       <span className={styles.Size}> {item.size} Kb</span>
-    </div>
+    </button>
   );
 };
 

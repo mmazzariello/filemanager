@@ -16,10 +16,22 @@
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 500;
+  width: 100%;
+  border: none;
+  background-color: #2f2f2f;
+  color: #fff;
 }
 
 .ParentContainer:hover {
   background-color: #3f3f3f;
+}
+
+.ParentContainer:focus {
+  background-color: #1c1c1c;
+}
+
+.ParentContainer:active {
+  outline: 2px solid rgb(63, 63, 63);
 }
 
 .ChildContainer {
@@ -29,6 +41,22 @@
   font-size: 16px;
   font-family: sans-serif;
   cursor: pointer;
+  width: 100%;
+  border: none;
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+.ChildContainer:hover {
+  background-color: #3f3f3f;
+}
+
+.ChildContainer:focus {
+  background-color: #1c1c1c;
+}
+
+.ChildContainer:active {
+  outline: 2px solid rgb(63, 63, 63);
 }
 
 .Name {
