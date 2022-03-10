@@ -1,3 +1,11 @@
 .FileContent {
-  /* border: 2px solid greenyellow; */
+  width: 100%;
+  background-color: var(--content-background-color);
+  font-size: 16px;
+  font-family: monospace;
+}
+
+pre {
+  padding: 24px;
+  white-space: pre-wrap;
 }
